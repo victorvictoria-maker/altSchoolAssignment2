@@ -1,0 +1,369 @@
+/* Font */
+:root {
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f7fdfc;
+  font-family: var(--primary-font);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* MAIN CSS */
+.header {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+}
+
+.header p {
+  width: 54px;
+  color: #011c34;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.header img {
+  width: 67px;
+  height: 11.5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 24px;
+  padding-inline-end: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.wrapper .text .inspire {
+  display: block;
+  width: fit-content;
+  color: #737373;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.wrapper .benefit,
+.wrapper .click-bg {
+  display: none;
+}
+
+.wrapper .text {
+  margin-block-end: 40px;
+}
+
+.wrapper .text svg {
+  margin-block-start: 30px;
+  margin-block-end: 40px;
+  width: 38.667px;
+  height: 40px;
+  flex-shrink: 0;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+
+.wrapper .text h1 {
+  width: 327px;
+  height: 30px;
+  color: #000b0a;
+  font-family: var(--secondary-font);
+  font-size: 30px;
+  font-weight: 700;
+  margin-block-end: 12px;
+}
+
+.wrapper .signupform {
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+  padding-block-start: 24px;
+  padding-block-end: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .signupform .name div,
+.wrapper .signupform .activity div {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .signupform label {
+  width: 197px;
+  height: 14px;
+  color: #011c34;
+  font-size: 14px;
+  font-weight: 600;
+  margin-block-end: 10px;
+}
+
+.wrapper .signupform .activitylevel {
+  margin-block-end: 18px;
+}
+
+.wrapper .signupform .password {
+  margin-block-end: 30px;
+}
+
+.wrapper .signupform input,
+.wrapper .signupform select {
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #f0f0f0;
+  padding-inline-start: 16px;
+  padding-inline-end: 52px;
+  padding-block-end: 14px;
+  padding-block-start: 14px;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+}
+
+.wrapper .signupform .firstname input {
+  border: 3px solid rgba(46, 196, 182, 0.6);
+}
+
+.wrapper .signupform .firstname input:focus {
+  border: 3px solid rgba(46, 196, 182, 0.6);
+}
+
+.wrapper .signupform input::placeholder {
+  color: #011c34;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.wrapper .signupform .name div {
+  margin-block-end: 24px;
+}
+
+.wrapper .signupform .placeholder,
+.wrapper .signupform .placeholder::placeholder {
+  color: #737373;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/* custom logo */
+/* for the password show icon */
+.password {
+  position: relative;
+}
+.passw svg {
+  position: absolute;
+  top: 65%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+#password {
+  padding-right: 24px;
+}
+
+/* For the custom date logo */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  inset-block-start: 55%;
+  inset-inline-end: 3rem;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0;
+}
+
+.datepicker {
+  position: relative;
+}
+
+.datepicker svg {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+
+.wrapper .signupform button {
+  height: 48px;
+  background-color: #2ec4b6;
+  border: 1px solid #2ec4b6;
+  color: #fff;
+  filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1));
+  margin-block-end: 16px;
+}
+
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.wrapper .click-sm {
+  margin-block-start: 24px;
+  margin-block-end: 64px;
+  margin-inline-start: 30px;
+  margin-inline-end: 30px;
+  height: 50px;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.wrapper .click-bg {
+  margin-inline-start: 18px;
+  margin-inline-end: 18px;
+  margin-block-start: 16px;
+  margin-block-end: 40px;
+}
+
+.wrapper .click-sm a,
+.wrapper .click-bg a {
+  color: #2ec4b6;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration-line: underline;
+}
+
+/*MEDIA QUERY FOR BIG SCREEN  */
+@media screen and (min-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .inspire,
+  .wrapper .click-sm {
+    display: none !important;
+  }
+
+  .benefit,
+  .wrapper .click-bg {
+    display: block !important;
+  }
+
+  .wrapper {
+    align-items: center;
+    justify-content: space-evenly;
+    margin-block-start: 81px;
+    margin-block-end: 80px;
+    max-width: 750px;
+  }
+
+  .wrapper .text {
+    max-width: 460px;
+  }
+
+  .wrapper .text svg {
+    margin-block-end: 10px;
+  }
+
+  .wrapper .text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-block-end: 20px;
+  }
+
+  .wrapper .text .benefit {
+    width: fit-content;
+    color: #737373;
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    max-width: 460px;
+  }
+
+  .signupform .name,
+  .signupform .activity {
+    margin-inline-start: 22px;
+    margin-inline-end: 22px;
+  }
+
+  .signupform .name .group1,
+  .signupform .name .group2,
+  .signupform .name .group3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .signupform .activitylevel,
+  .signupform .password {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signupform button {
+    margin-inline-end: 22px;
+    margin-inline-start: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    flex-direction: row;
+    max-width: 1440px;
+  }
+
+  .wrapper .text svg {
+    width: 77.333px;
+    height: 80px;
+    margin-block-end: 25px;
+  }
+}
